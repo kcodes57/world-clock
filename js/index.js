@@ -48,7 +48,11 @@ function updateCity(event) {
           </div>
 
           <div class="time" id="la-time">${cityTime}</div>
-        </div>`;
+        </div>
+        <a href="/" target="_blank"
+        >All Cities</a
+      >
+        `;
 }
 
 let citiesSelectElement = document.querySelector("#city");

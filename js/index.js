@@ -8,7 +8,7 @@ function updateTime() {
   let losAngelesTimeElement = document.querySelector("#la-time");
   let losAngelesTime = moment()
     .tz("America/Los_Angeles")
-    .format("h:mm:ss [<small>]A[</small>] ");
+    .format("h:mm:ss [<small>]A[</small>]");
   losAngelesTimeElement.innerHTML = losAngelesTime;
 
   let sydneyDateElement = document.querySelector("#s-date");
@@ -16,7 +16,9 @@ function updateTime() {
   sydneyDateElement.innerHTML = sydneyDate;
 
   let sydneyTimeElement = document.querySelector("#s-time");
-  let sydneyTime = moment().tz("Australia/Sydney").format("h:mm:ss A");
+  let sydneyTime = moment()
+    .tz("Australia/Sydney")
+    .format("h:mm:ss [<small>]A[</small>]");
   sydneyTimeElement.innerHTML = sydneyTime;
 }
 

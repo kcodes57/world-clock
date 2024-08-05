@@ -25,6 +25,17 @@ function updateTime() {
       .format("h:mm:ss [<small>]A[</small>]");
     melbourneTimeElement.innerHTML = melbourneTime;
   }
+  let cairoDateElement = document.querySelector("#c-date");
+  if (cairoDateElement) {
+    let cairoDate = moment().tz("Australia/Melbourne").format("MMMM Do YYYY");
+    cairoDateElement.innerHTML = cairoDate;
+
+    let cairoTimeElement = document.querySelector("#c-time");
+    let cairoTime = moment()
+      .tz("Australia/Melbourne")
+      .format("h:mm:ss [<small>]A[</small>]");
+    cairoTimeElement.innerHTML = cairoTime;
+  }
 }
 
 updateTime();

@@ -12,32 +12,65 @@ function updateTime() {
       .format("h:mm:ss [<small>]A[</small>]");
     mexicoCityTimeElement.innerHTML = mexicoCityTime;
   }
-  let melbourneDateElement = document.querySelector("#m-date");
-  if (melbourneDateElement) {
-    let melbourneDate = moment()
-      .tz("Australia/Melbourne")
-      .format("MMMM Do YYYY");
-    melbourneDateElement.innerHTML = melbourneDate;
+  let sydneyDateElement = document.querySelector("#m-date");
+  if (sydneyDateElement) {
+    let sydneyDate = moment().tz("Australia/Sydney").format("MMMM Do YYYY");
+    sydneyDateElement.innerHTML = sydneyDate;
 
-    let melbourneTimeElement = document.querySelector("#m-time");
-    let melbourneTime = moment()
+    let sydneyTimeElement = document.querySelector("#m-time");
+    let sydneyTime = moment()
       .tz("Australia/Melbourne")
       .format("h:mm:ss [<small>]A[</small>]");
-    melbourneTimeElement.innerHTML = melbourneTime;
+    sydneyTimeElement.innerHTML = sydneyTime;
   }
   let cairoDateElement = document.querySelector("#c-date");
   if (cairoDateElement) {
-    let cairoDate = moment().tz("Australia/Melbourne").format("MMMM Do YYYY");
+    let cairoDate = moment().tz("Africa/Cairo").format("MMMM Do YYYY");
     cairoDateElement.innerHTML = cairoDate;
 
     let cairoTimeElement = document.querySelector("#c-time");
     let cairoTime = moment()
-      .tz("Australia/Melbourne")
+      .tz("Africa/Cairo")
       .format("h:mm:ss [<small>]A[</small>]");
     cairoTimeElement.innerHTML = cairoTime;
   }
-}
+  let parisDateElement = document.querySelector("#p-date");
+  if (parisDateElement) {
+    let parisDate = moment().tz("Europe/Paris").format("MMMM Do YYYY");
+    parisDateElement.innerHTML = parisDate;
 
+    let parisTimeElement = document.querySelector("#p-time");
+    let parisTime = moment()
+      .tz("Europe/Paris")
+      .format("h:mm:ss [<small>]A[</small>]");
+    parisTimeElement.innerHTML = parisTime;
+  }
+  let saoPauloDateElement = document.querySelector("#sp-date");
+  if (saoPauloDateElement) {
+    let saoPauloDate = moment().tz("America/Sao_Paulo").format("MMMM Do YYYY");
+    saoPauloDateElement.innerHTML = saoPauloDate;
+
+    let saoPauloTimeElement = document.querySelector("#sp-time");
+    let saoPauloTime = moment()
+      .tz("America/Sao_Paulo")
+      .format("h:mm:ss [<small>]A[</small>]");
+    saoPauloTimeElement.innerHTML = saoPauloTime;
+  }
+  let tokyoDateElement = document.querySelector("#to-date");
+
+  if (tokyoDateElement) {
+    let tokyoDate = moment().tz("Asia/Tokyo").format("MMMM Do YYYY");
+    tokyoDateElement.innerHTML = tokyoDate;
+
+    let tokyoTimeElement = document.querySelector("#to-time");
+
+    let tokyoTime = moment()
+      .tz("Asia/Tokyo")
+      .format("h:mm:ss [<small>]A[</small>]");
+
+    tokyoTimeElement.innerHTML = tokyoTime;
+  }
+}
 updateTime();
 setInterval(updateTime, 1000);
 
